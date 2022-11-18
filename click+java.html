@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Button java</title>
+    <link rel="stylesheet" href="click+.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="boxs">
+            <h2>Accordion Heading 1<i class="fa-sharp fa-solid fa-plus"></i></h2>
+            <div class="click">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, hic. Necessitatibus sequi iusto atque
+                    qui
+                    aliquid nesciunt optio reprehenderit, reiciendis perferendis quis deleniti repellendus at. Possimus
+                    ducimus quae iure quod.</p>
+            </div>
+        </div>
+
+        <div class="boxs">
+            <h2>Accordion Heading 2<i class="fa-sharp fa-solid fa-plus"></i></h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, hic. Necessitatibus sequi iusto atque
+                qui
+                aliquid nesciunt optio reprehenderit, reiciendis perferendis quis deleniti repellendus at. Possimus
+                ducimus quae iure quod.</p>
+        </div>
+
+
+        <div class="boxs">
+            <h2>Accordion Heading 3<i class="fa-sharp fa-solid fa-plus"></i></h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, hic. Necessitatibus sequi iusto atque
+                qui
+                aliquid nesciunt optio reprehenderit, reiciendis perferendis quis deleniti repellendus at. Possimus
+                ducimus quae iure quod.</p>
+        </div>
+
+
+        <div class="boxs">
+            <h2>Accordion Heading 4<i class="fa-sharp fa-solid fa-plus"></i></h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, hic. Necessitatibus sequi iusto atque
+                qui
+                aliquid nesciunt optio reprehenderit, reiciendis perferendis quis deleniti repellendus at. Possimus
+                ducimus quae iure quod.</p>
+        </div>
+
+
+    </div>
+    <script>
+        let all = document.querySelectorAll(".boxs i")
+        all.forEach(function(plus){
+            plus.onclick = function(){
+                let para = plus.parentElement.nextElementSibling
+                if (para.classList.contains("click")) {
+                    para.classList.remove("click")
+
+                    plus.classList.remove("fa-minus")
+                    plus.classList.add("fa-plus")
+                }
+                else {
+                    para.classList.add("click")
+                    plus.classList.remove("fa-plus")
+                    plus.classList.add("fa-minus")
+                }
+            }
+        }
+        )
+    </script>
+
+</body>
+
+</html>
